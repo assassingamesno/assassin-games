@@ -1,0 +1,57 @@
+@import "../imports/colors";
+
+#page-wrap {
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: $stonebrown;
+  transition: color 0.2s;
+  padding: 0.3em;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: $grey;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: calc(100% - 2 * 36px);
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: $gold;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: $stonebrown;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: $gold;
+  padding: 2.5em 1.5em 0;
+  font-size: 1em;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

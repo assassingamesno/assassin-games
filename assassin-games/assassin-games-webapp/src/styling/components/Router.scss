@@ -1,0 +1,86 @@
+.router-page {
+    background-color: #2a2323;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    color: #d8c5b2;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+/*
+.router-navbar {
+    background-color: #2a2323;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    justify-content: space-between;
+    color: #d8c5b2;
+    text-align: center;
+}
+
+.router-navbutton {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+*/
+@font-face {
+    font-family: "Lusitana";
+    src: local("Lusitana"), url(../../fonts/Lusitana-Regular.ttf) format("truetype");
+}
+
+.lusitana {
+    font-family: "Lusitana";
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: local("PT Sans"), url(../../fonts/PT_sans/PTSans-Regular.ttf) format("truetype");
+}
+
+* {
+    font-family: "PT Sans";
+    color: #d8c5b2;
+    text-decoration: none;
+}
+
+button {
+    background-color: #d8c5b2;
+    color: #2a2323;
+    border-radius: 39px;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+button:active {
+    background-color: #ccb399;
+}
+
+.handleContainer {
+    margin-top: 23px;
+    display: flex;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.handleContainer > img {
+    margin-right: 5px;
+}
+
+.partnerLogos {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.countdownContainer {
+    margin-left: 34px;
+}

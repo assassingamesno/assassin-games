@@ -1,0 +1,24 @@
+@import "../imports/colors";
+.router-navbar {
+    background-color: $darkbrown;
+    /*
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    */
+}
+
+.router-navbutton {
+    display: flex;
+}
+
+.logo {
+    padding-top: 2em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.header {
+    justify-self: center;
+    color: $gold;
+}

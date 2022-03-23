@@ -1,0 +1,22 @@
+@import "./styling/imports/colors";
+
+/*.router-page {
+  background-color: $darkbrown;
+  min-height: 100vh;
+  text-align: center;
+  display: grid;
+  color: $gold;
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  justify-content: center;
+}*/
+
+#App {
+  background-color: $darkbrown;
+  min-height: 100vh;
+}
+
+#page-wrap {
+  background-color: transparent;
+}

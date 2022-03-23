@@ -1,0 +1,301 @@
+@import "../imports/_color";
+
+/* Registration navigation bar colors*/
+$regNavBarBackground: $stonebrown;
+$regNavBarButtons: $gold;
+$regNavBarButtonsActive: rgba($regNavBarButtons, 0.8);
+$regNavBarContrast: black;
+
+/* Registration form colors */
+$regFormBackground: $stonepaper;
+$regFormText: black;
+
+/* Input field colors */
+$FormFieldTitleText: white;
+$FormFieldTitleBackground: black;
+$FormFieldInputText: black;
+$FormFieldInputBackground: white;
+$FormFieldPlaceholderText: $placeholdergrey;
+
+$FormPictureBackground: white;
+
+$TagBackground: black;
+$TagText: white;
+
+.registrationWrapper {
+  width: 500px;
+  align-items: center;
+}
+
+.regNavbar {
+  display: flex;
+  background-color: $regNavBarBackground;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.regNavbar > * {
+  background-color: transparent;
+}
+
+.regNavButton {
+  display: flex;
+  background-color: transparent;
+  border: 3px solid $regNavBarButtons;
+  color: $regNavBarButtons;
+  align-items: center;
+}
+
+.regNavButton:active {
+  border: 3px solid $regNavBarButtonsActive;
+  background-color: transparent;
+  color: $regNavBarButtonsActive;
+}
+
+.regNavButton > * {
+  background-color: transparent;
+  color: $regNavBarButtons;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.regNavButton:active > * {
+  color: $regNavBarButtonsActive;
+}
+
+.regNavCounterWrapper {
+  display: flex;
+  background-color: transparent;
+}
+
+.regNavCurCounter {
+  /* Auto Layout - Figma */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+
+  position: static;
+  width: 39px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+
+  background: #000000;
+  /* GOLD */
+
+  border: 2px solid $regNavBarButtons;
+  box-sizing: border-box;
+  border-radius: 28px 0px 0px 28px;
+}
+
+.regNavTotalCounter {
+  /* Auto Layout - Figma */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 39px;
+  height: 34px;
+
+  /* GOLD */
+  color: #000000;
+  background: $regNavBarButtons;
+  border-radius: 0px 28px 28px 0px;
+}
+
+.next {
+  margin-right: 5px;
+}
+
+.prev {
+  margin-left: 5px;
+}
+
+.regFormWrapper {
+  background-color: $regFormBackground;
+  padding: 1em;
+}
+
+.regFormWrapper > * {
+  background-color: transparent;
+  color: $regFormText;
+}
+
+.regFormDesc {
+  width: 60%;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.regFormDesc > * {
+  color: $regFormText;
+}
+
+.regFormTitle {
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-top: 0px;
+}
+
+.assassinPicGuidelineWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+}
+
+.assassinPicGuideline {
+  margin: 5px;
+}
+
+.assassinPicGuidelinePic {
+  background-color: $FormPictureBackground;
+}
+
+#apgYes {
+  margin-left: 0px;
+}
+
+#assassinPicGuidelineNos {
+  display: flex;
+}
+
+#assassinPicGuidelineNos > .assassinPicGuideline {
+  opacity: 0.8;
+}
+
+.TagContainer {
+  display: flex;
+  background-color: transparent;
+  flex-wrap: wrap;
+}
+
+.Tag {
+  display: flex;
+  background-color: $TagBackground;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  margin: 1em;
+  border-radius: 30px;
+}
+
+.Tag > * {
+  color: $TagText;
+}
+
+#TagDelete {
+  background-color: transparent;
+  margin-left: 15px;
+  padding: 0;
+}
+
+.FormField {
+  background-color: transparent;
+  justify-content: left;
+  align-items: center;
+  margin: 1em;
+}
+
+.FormFieldTitle {
+  background-color: $FormFieldTitleBackground;
+  color: $FormFieldTitleText;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.FormSelect {
+  margin: 1em;
+}
+
+.FormSelectInput {
+  width: 100%;
+  background: $FormFieldInputBackground;
+  color: $FormFieldInputText;
+  border: none;
+  padding: 5px;
+}
+
+.FormSelectInput > option {
+  color: $FormFieldInputText;
+}
+
+.FormTagInputWrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: $FormFieldInputBackground;
+}
+
+.FormTagSubmit {
+  background-color: transparent;
+  border: 3px solid $FormFieldInputText;
+  color: $FormFieldInputText;
+  width: 20%;
+  padding: 3px;
+}
+
+.FormPictureInput {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.FormPictureContainer {
+  display: flex;
+  justify-content: center;
+  width: 135px;
+  min-height: 150px;
+  background-color: $FormPictureBackground;
+  align-items: center;
+}
+
+.FormFieldInstaWrapper {
+  display: flex;
+  background-color: $FormFieldInputBackground;
+}
+
+#InstaAlfa {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+#InstaAlfa > * {
+  color: $FormFieldPlaceholderText;
+}
+
+#InstaInput {
+  padding-bottom: 7px;
+}
+
+#InstaLanding {
+  color: $regFormText;
+}
+
+#InstaLandingButton {
+  background-color: $regNavBarBackground;
+  border-radius: 36px;
+  padding: 7px;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 25%);
+  color: $regFormBackground;
+}
+
+input.FormFieldInput[type="text"],
+textarea {
+  background-color: $FormFieldInputBackground;
+  color: $FormFieldInputText;
+  border: none;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
