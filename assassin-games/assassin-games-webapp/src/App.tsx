@@ -2,7 +2,7 @@ import About from "./components/About";
 import Contestants from "./components/Contestants";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar/Navbar";
-import Registration, { RegistrationLanding } from "./components/Registration/Registration";
+//import Registration, { RegistrationLanding } from "./components/Registration/Registration";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styling/components/Router.scss";
