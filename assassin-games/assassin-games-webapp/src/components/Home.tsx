@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Component imports
 import Countdown from './Countdown'
@@ -14,10 +14,20 @@ import Eucalyptus from '../assets/img/EucalyptusTorso.png'
 import Lovehearts from '../assets/img/LoveheartsTorso.png'
 import Sandmonster from '../assets/img/SandmonsterTorso.png'
 import igIcon from '../assets/svg/instaLogoNeg.svg'
+import combinedTorsos from '../assets/img/combinedTorso.png'
 
 export default function Home() {
 
     let countdownTitle = "registrering åpner om" //TODO: finn en måte å gjøre sånn at denne kan oppdateres for arrangør
+    const [width, setWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        function updateWidth() {
+            setWidth(window.innerWidth)
+        }
+
+        window.addEventListener('resize', updateWidth)
+    })
 
 
     return (
@@ -28,11 +38,20 @@ export default function Home() {
             </div >
             <div className="router-page">
                 <div id="homeAssassinContainer">
-                    <img src={Eucalyptus} alt="euca-assassin" />
-                    <img src={Sandmonster} alt="love-assassin" />
-                    <img src={Lovehearts} alt="love-assassin" />
-                    <img src={Iris} alt="iris-assassin" />
-                    <img src={Gress} alt="grass-assassin" />
+                    {
+                        (width > 968) ? (
+                            <>
+                                <img src={Eucalyptus} alt="euca-assassin" />
+                                <img src={Sandmonster} alt="love-assassin" />
+                                <img src={Lovehearts} alt="love-assassin" />
+                                <img src={Iris} alt="iris-assassin" />
+                                <img src={Gress} alt="grass-assassin" />
+                            </>) :
+                            (
+                                <img src={combinedTorsos} alt="assassin-torsos" />
+                            )
+                    }
+
                 </div>
                 <h1 className="lusitana">ASSASSIN GAMES</h1>
                 <InstaHandle title="ag.trondheim" />

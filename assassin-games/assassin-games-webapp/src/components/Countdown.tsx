@@ -22,7 +22,6 @@ export default function Countdown(props: CountdownProps) {
         counter = secDiff % (60 * 60 * 24)
         let hours: number = Math.floor(counter / (60 * 60));
         counter = counter % (60 * 60);
-        console.log(counter);
         let minutes = Math.floor(counter / 60);
         counter = counter % 60
         let seconds: number = Math.floor(counter);
