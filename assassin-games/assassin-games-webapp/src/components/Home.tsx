@@ -8,13 +8,13 @@ import '../styling/components/Router.scss'
 
 //Graphics import
 //import CalmFocused from '../assets/img/calm_focused_transp.png'
-import Iris from '../assets/img/IrisTorso.png'
-import Gress from '../assets/img/GressTorso.png'
-import Eucalyptus from '../assets/img/EucalyptusTorso.png'
-import Lovehearts from '../assets/img/LoveheartsTorso.png'
-import Sandmonster from '../assets/img/SandmonsterTorso.png'
+import Iris from '../assets/svg/homepage_graphics/irisTorso.svg'
+import Gress from '../assets/svg/homepage_graphics/gressTorso.svg'
+import Eucalyptus from '../assets/svg/homepage_graphics/eucalyptusTorso.svg'
+import Lovehearts from '../assets/svg/homepage_graphics/loveheartsTorso.svg'
+import Sandmonster from '../assets/svg/homepage_graphics/sandmonsterTorso.svg'
 import igIcon from '../assets/svg/instaLogoNeg.svg'
-import combinedTorsos from '../assets/img/combinedTorso.png'
+import combinedTorsos from '../assets/svg/homepage_graphics/combinedTorso.svg'
 
 export default function Home() {
 
@@ -34,7 +34,7 @@ export default function Home() {
         <>
             <div className="countdownContainer">
                 <div>{countdownTitle.toUpperCase()}</div>
-                <Countdown seasonStart='04/04/2022 00:00:00'></Countdown>
+                <Countdown seasonStart='04/04/2022 00:00:00 +0200'></Countdown>
             </div >
             <div className="router-page">
                 <div id="homeAssassinContainer">

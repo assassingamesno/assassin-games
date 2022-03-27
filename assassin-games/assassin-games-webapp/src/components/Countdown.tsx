@@ -43,10 +43,13 @@ export default function Countdown(props: CountdownProps) {
     return (
         <div>
             <h1 className="lusitana countdown">
-                {res[0].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}d:
-                {res[1].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}t:
-                {res[2].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}m:
-                {res[3].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}s</h1>
+                {
+                    res[0].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }) + "d : " +
+                    res[1].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }) + "t : " +
+                    res[2].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }) + "m : " +
+                    res[3].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }) + "s"
+                }
+            </h1>
         </div>
     )
 }
