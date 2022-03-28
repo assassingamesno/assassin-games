@@ -8,13 +8,13 @@ import '../styling/components/Router.scss'
 
 //Graphics import
 //import CalmFocused from '../assets/img/calm_focused_transp.png'
-import Iris from '../assets/svg/homepage_graphics/irisTorso.svg'
-import Gress from '../assets/svg/homepage_graphics/gressTorso.svg'
-import Eucalyptus from '../assets/svg/homepage_graphics/eucalyptusTorso.svg'
-import Lovehearts from '../assets/svg/homepage_graphics/loveheartsTorso.svg'
-import Sandmonster from '../assets/svg/homepage_graphics/sandmonsterTorso.svg'
+import Iris from '../assets/img/homepage_graphics/irisTorso.png'
+import Gress from '../assets/img/homepage_graphics/gressTorso.png'
+import Eucalyptus from '../assets/img/homepage_graphics/eucalyptusTorso.png'
+import Lovehearts from '../assets/img/homepage_graphics/loveheartsTorso.png'
+import Sandmonster from '../assets/img/homepage_graphics/sandmonsterTorso.png'
 import igIcon from '../assets/svg/instaLogoNeg.svg'
-import combinedTorsos from '../assets/svg/homepage_graphics/combinedTorso.svg'
+import combinedTorsos from '../assets/img/homepage_graphics/combinedTorso.png'
 
 export default function Home() {
 
@@ -41,14 +41,14 @@ export default function Home() {
                     {
                         (width > 968) ? (
                             <>
-                                <img src={Eucalyptus} alt="euca-assassin" />
-                                <img src={Sandmonster} alt="love-assassin" />
-                                <img src={Lovehearts} alt="love-assassin" />
-                                <img src={Iris} alt="iris-assassin" />
-                                <img src={Gress} alt="grass-assassin" />
+                                <img src={Eucalyptus} alt="euca-assassin" width="174px" height="147px" />
+                                <img src={Sandmonster} alt="love-assassin" width="174px" height="147px" />
+                                <img src={Lovehearts} alt="love-assassin" width="174px" height="147px" />
+                                <img src={Iris} alt="iris-assassin" width="174px" height="147px" />
+                                <img src={Gress} alt="grass-assassin" width="174px" height="147px" />
                             </>) :
                             (
-                                <img src={combinedTorsos} alt="assassin-torsos" />
+                                <img src={combinedTorsos} alt="assassin-torsos" width="348px" />
                             )
                     }
 
