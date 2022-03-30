@@ -103,10 +103,11 @@ button:active {
 
 .WTGraphic {
     max-width: 78vw;
+    margin-bottom: 2em;
 }
 
 .WTGraphicTitle {
-    text-align: left;
+    text-align: center;
     margin-left: 1em;
     font-weight: 700;
 }
@@ -115,7 +116,18 @@ button:active {
     max-width: 80vw;
 }
 
+.WTGrahicContainer {
+    display: grid;
+}
+
 #WTIngress {
     text-align: left;
     margin-left: 1em;
+    margin-bottom: 3em;
+}
+
+@media screen and (max-width: 600px) {
+    .WTGraphicTitle {
+        text-align: left;
+    }
 }

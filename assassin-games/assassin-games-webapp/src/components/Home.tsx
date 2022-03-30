@@ -66,19 +66,19 @@ export default function Home() {
                 <InstaHandle title="ag.trondheim" />
                 <div className="WTContainer">
                     <div className='grid-homepage-intro'>
-                    <div className='WTTitleBox'>
-                        <h1 className='lusitana'>
-                            En forklaring av spillets gang
-                        </h1>
-                    </div>
-                        <WalkthroughGraphic title='' graphic={flyingAssassin}/>
-                    <div id='WTIngress'>
-                        Assassin Games er et frivillig initiativ<br/>
-                        drevet av og for studenter i Trondheim.<br/>
-                        Fra 24. april er ingen steder trygge.<br/>
-                        Trondheim transformeres til en slagmark<br/>
-                        hvor kun den sterkeste kan stå igjen som seiersherre.
-                    </div>
+                        <WalkthroughGraphic title='' graphic={flyingAssassin} />
+                        <div className='WTTitleBox'>
+                            <h1 className='lusitana'>
+                                En forklaring av spillets gang
+                            </h1>
+                        </div>
+                        <div id='WTIngress'>
+                            Assassin Games er et frivillig initiativ<br />
+                            drevet av og for studenter i Trondheim.<br />
+                            Fra 24. april er ingen steder trygge.<br />
+                            Trondheim transformeres til en slagmark<br />
+                            hvor kun den sterkeste overlever.
+                        </div>
                     </div>
                     <div>
                         <WalkthroughGraphic title='Alle spillere får tildelt én vannpistol og ett target' graphic={gameStart} />
@@ -120,9 +120,9 @@ interface WTGprops {
 
 function WalkthroughGraphic(props: WTGprops) {
     return (
-        <>
+        <div className='WTGraphicContainer'>
             <h2 className='WTGraphicTitle'>{props.title}</h2>
             <img className="WTGraphic" src={props.graphic} alt='Walkthrough graphic' />
-        </>
+        </div>
     )
 }
