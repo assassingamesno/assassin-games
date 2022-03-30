@@ -1,3 +1,8 @@
+@import "../imports/_color";
+
+$WTTitleBoxBG: $stonebrown;
+$WTTitleBoxBorder: $stonepaper;
+
 .router-page {
     background-color: #2a2323;
     text-align: center;
@@ -84,4 +89,33 @@ button:active {
 
 .countdownContainer {
     margin-left: 34px;
+}
+
+.WTTitleBox {
+    background-color: $WTTitleBoxBG;
+    border: solid 1px $WTTitleBoxBorder;
+    border-radius: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: fit-content;
+    margin: 1em;
+}
+
+.WTGraphic {
+    max-width: 78vw;
+}
+
+.WTGraphicTitle {
+    text-align: left;
+    margin-left: 1em;
+    font-weight: 700;
+}
+
+.WTContainer {
+    max-width: 80vw;
+}
+
+#WTIngress {
+    text-align: left;
+    margin-left: 1em;
 }
