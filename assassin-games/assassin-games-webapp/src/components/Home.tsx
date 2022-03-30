@@ -15,6 +15,15 @@ import Lovehearts from '../assets/img/homepage_graphics/loveheartsTorso.png'
 import Sandmonster from '../assets/img/homepage_graphics/sandmonsterTorso.png'
 import igIcon from '../assets/svg/instaLogoNeg.svg'
 import combinedTorsos from '../assets/img/homepage_graphics/combinedTorso.png'
+import gameStart from '../assets/img/homepage_graphics/gameStart.png'
+import huntStart from '../assets/img/homepage_graphics/huntStart.png'
+import huntAttack from '../assets/img/homepage_graphics/huntAttack.png'
+import newTarget from '../assets/img/homepage_graphics/newTarget.png'
+import huntHerjer from '../assets/img/homepage_graphics/huntHerjer.png'
+import instaUpdates from '../assets/img/homepage_graphics/instaUpdates.png'
+import awardsDuring from '../assets/img/homepage_graphics/awardsDuring.png'
+import winner from '../assets/img/homepage_graphics/winner.png'
+import flyingAssassin from '../assets/img/homepage_graphics/flyingAssassin.png'
 
 export default function Home() {
 
@@ -56,28 +65,34 @@ export default function Home() {
                 <h1 className="lusitana">ASSASSIN GAMES</h1>
                 <InstaHandle title="ag.trondheim" />
                 <div className="WTContainer">
+                    <div className='grid-homepage-intro'>
                     <div className='WTTitleBox'>
                         <h1 className='lusitana'>
-                            En forklaring av <br /> spillets gang
+                            En forklaring av spillets gang
                         </h1>
                     </div>
+                        <WalkthroughGraphic title='' graphic={flyingAssassin}/>
                     <div id='WTIngress'>
-                        Assassin Games er et frivillig initiativ
-                        drevet av og for studenter i Trondheim.
-                        Fra 24. april er ingen steder trygge.
-                        Trondheim transformeres til en slagmark
-                        hvor kun den sterkest kan stå igjen som seiersherre.
+                        Assassin Games er et frivillig initiativ<br/>
+                        drevet av og for studenter i Trondheim.<br/>
+                        Fra 24. april er ingen steder trygge.<br/>
+                        Trondheim transformeres til en slagmark<br/>
+                        hvor kun den sterkeste kan stå igjen som seiersherre.
+                    </div>
                     </div>
                     <div>
-                        <WalkthroughGraphic title='Alle spillere får tildelt én vannpistol og ett target' graphic={combinedTorsos} />
-                        <WalkthroughGraphic title='Jakten har begynt' graphic={combinedTorsos} />
-                        <WalkthroughGraphic title='Du slår til på riktig tidspunkt' graphic={combinedTorsos} />
-                        <WalkthroughGraphic title='Du får nytt target' graphic={combinedTorsos} />
-                        <WalkthroughGraphic title='Jakten herjer' graphic={combinedTorsos} />
-                        <WalkthroughGraphic title='Oppdatering på instagram' graphic={combinedTorsos} />
-                        <WalkthroughGraphic title='Permier underveis' graphic={combinedTorsos} />
-                        <WalkthroughGraphic title='Den siste som står igjen løfter pokalen' graphic={combinedTorsos} />
+                        <WalkthroughGraphic title='Alle spillere får tildelt én vannpistol og ett target' graphic={gameStart} />
+                        <WalkthroughGraphic title='Jakten har begynt' graphic={huntStart} />
+                        <WalkthroughGraphic title='Du slår til på riktig tidspunkt' graphic={huntAttack} />
+                        <WalkthroughGraphic title='Du får nytt target' graphic={newTarget} />
+                        <WalkthroughGraphic title='Jakten herjer' graphic={huntHerjer} />
+                        <WalkthroughGraphic title='Oppdatering på instagram' graphic={instaUpdates} />
+                        <WalkthroughGraphic title='Permier underveis' graphic={awardsDuring} />
+                        <WalkthroughGraphic title='Den siste som står igjen løfter pokalen' graphic={winner} />
                     </div>
+                </div>
+                <div className='Footer'>
+                    {/* <p>Denne nettsiden er laget av Kodeklubben <sup>TM</sup></p> */}
                 </div>
             </div >
         </>
