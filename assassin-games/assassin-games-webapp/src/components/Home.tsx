@@ -43,7 +43,7 @@ export default function Home() {
         <>
             <div className="countdownContainer">
                 <div>{countdownTitle.toUpperCase()}</div>
-                <Countdown seasonStart='04/04/2022 00:00:00 +0200'></Countdown>
+                <Countdown seasonStart='04/04/2022 12:00:00 +0200'></Countdown>
             </div >
             <div className="router-page">
                 <div id="homeAssassinContainer">
@@ -87,7 +87,7 @@ export default function Home() {
                         <WalkthroughGraphic title='Du får nytt target' graphic={newTarget} />
                         <WalkthroughGraphic title='Jakten herjer' graphic={huntHerjer} />
                         <WalkthroughGraphic title='Oppdatering på instagram' graphic={instaUpdates} />
-                        <WalkthroughGraphic title='Permier underveis' graphic={awardsDuring} />
+                        <WalkthroughGraphic title='Premier underveis' graphic={awardsDuring} />
                         <WalkthroughGraphic title='Den siste som står igjen løfter pokalen' graphic={winner} />
                     </div>
                 </div>
