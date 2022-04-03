@@ -1,6 +1,11 @@
 
 export interface reduxStore {
+    home: Home,
     registration: registration,
+}
+
+export interface Home {
+    regOpenBool: boolean,
 }
 
 export interface Personalia {

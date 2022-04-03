@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { reduxStore } from '../utilities/Interfaces'
 
 // Component imports
 import Countdown from './Countdown'
@@ -7,7 +9,6 @@ import Countdown from './Countdown'
 import '../styling/components/Router.scss'
 
 //Graphics import
-//import CalmFocused from '../assets/img/calm_focused_transp.png'
 import Iris from '../assets/img/homepage_graphics/irisTorso.png'
 import Gress from '../assets/img/homepage_graphics/gressTorso.png'
 import Eucalyptus from '../assets/img/homepage_graphics/eucalyptusTorso.png'
@@ -27,7 +28,7 @@ import flyingAssassin from '../assets/img/homepage_graphics/flyingAssassin.png'
 
 export default function Home() {
 
-    let countdownTitle = "registrering åpner om" //TODO: finn en måte å gjøre sånn at denne kan oppdateres for arrangør
+    let countdownTitle = "registrering åpner om" //TODO: Legg inn info i backend m tittel etc for arrangør
     const [width, setWidth] = useState(window.innerWidth)
 
     useEffect(() => {
@@ -38,6 +39,7 @@ export default function Home() {
         window.addEventListener('resize', updateWidth)
     })
 
+    const homeState = useSelector((state: reduxStore) => state.home)
 
     return (
         <>
@@ -63,6 +65,12 @@ export default function Home() {
 
                 </div>
                 <h1 className="lusitana">ASSASSIN GAMES</h1>
+                {
+                    homeState.regOpenBool ?
+                        <button onClick={() => { window.open("https://forms.office.com/r/bBw5V9pqVv", "_blank") }}>Registrer deg her!</button>
+                        :
+                        <button className='unclickable'>Registreringen åpner snart</button>
+                }
                 <InstaHandle title="ag.trondheim" />
                 <div className="WTContainer">
                     <div className='grid-homepage-intro'>
