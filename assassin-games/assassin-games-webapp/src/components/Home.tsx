@@ -80,16 +80,16 @@ export default function Home() {
                             hvor kun den sterkeste overlever.
                         </div>
                     </div>
-                    <div>
-                        <WalkthroughGraphic title='Alle spillere får tildelt én vannpistol og ett target' graphic={gameStart} />
-                        <WalkthroughGraphic title='Jakten har begynt' graphic={huntStart} />
-                        <WalkthroughGraphic title='Du slår til på riktig tidspunkt' graphic={huntAttack} />
-                        <WalkthroughGraphic title='Du får nytt target' graphic={newTarget} />
-                        <WalkthroughGraphic title='Jakten herjer' graphic={huntHerjer} />
-                        <WalkthroughGraphic title='Oppdatering på instagram' graphic={instaUpdates} />
-                        <WalkthroughGraphic title='Premier underveis' graphic={awardsDuring} />
-                        <WalkthroughGraphic title='Den siste som står igjen løfter pokalen' graphic={winner} />
-                    </div>
+                </div>
+                <div className='WTGraphicWrapper'>
+                    <WalkthroughGraphic title='Alle spillere får tildelt én vannpistol og ett target' graphic={gameStart} />
+                    <WalkthroughGraphic title='Jakten har begynt' graphic={huntStart} />
+                    <WalkthroughGraphic title='Du slår til på riktig tidspunkt' graphic={huntAttack} />
+                    <WalkthroughGraphic title='Du får nytt target' graphic={newTarget} />
+                    <WalkthroughGraphic title='Jakten herjer' graphic={huntHerjer} />
+                    <WalkthroughGraphic title='Oppdatering på instagram' graphic={instaUpdates} />
+                    <WalkthroughGraphic title='Premier underveis' graphic={awardsDuring} />
+                    <WalkthroughGraphic title='Den siste som står igjen løfter pokalen' graphic={winner} />
                 </div>
                 <div className='Footer'>
                     {/* <p>Denne nettsiden er laget av Kodeklubben <sup>TM</sup></p> */}
