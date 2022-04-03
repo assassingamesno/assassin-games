@@ -53,6 +53,8 @@ $WTTitleBoxBorder: $stonepaper;
 }
 
 button {
+    width: fit-content;
+    justify-self: center;
     background-color: #d8c5b2;
     color: #2a2323;
     border-radius: 39px;
@@ -67,6 +69,14 @@ button {
 
 button:active {
     background-color: #ccb399;
+}
+
+.unclickable {
+    opacity: 0.5;
+}
+.unclickable:active {
+    background-color: #d8c5b2;
+    opacity: 0.5;
 }
 
 .handleContainer {
