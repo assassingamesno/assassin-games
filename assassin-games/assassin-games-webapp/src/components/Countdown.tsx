@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux';
+import { openReg } from '../store/home/actions'
 
 import '../styling/components/home.scss'
 
@@ -9,12 +11,15 @@ interface CountdownProps {
 export default function Countdown(props: CountdownProps) {
 
     const countdownDate = new Date(Date.parse(props.seasonStart));
-    const [res, setRes] = useState(getTimeUntilStart(new Date(), countdownDate));
+    const now = new Date()
+    const [res, setRes] = useState(getTimeUntilStart(now, countdownDate));
+
+    const dispatch = useDispatch()
 
     function getTimeUntilStart(curr: Date, start: Date): [number, number, number, number] {
         // Helper function calculating the days, hours and seconds between curr and start
 
-        // Calculater difference in milliseconds
+        // Calculates difference in milliseconds
         let secDiff: number = (start.getTime() - curr.getTime()) / 1000;
         let counter = secDiff;
 
@@ -33,7 +38,10 @@ export default function Countdown(props: CountdownProps) {
 
         const timer = setTimeout(() => {
             setRes(getTimeUntilStart(new Date(), countdownDate));
-        }, 1000)
+        }, 1050)
+        if (now.getTime() - countdownDate.getTime() >= 0) {
+            dispatch(openReg())
+        }
 
         return () => {
             clearTimeout(timer)

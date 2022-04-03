@@ -44,8 +44,14 @@ export default function Home() {
     return (
         <>
             <div className="countdownContainer">
-                <div>{countdownTitle.toUpperCase()}</div>
-                <Countdown seasonStart='04/04/2022 12:00:00 +0200'></Countdown>
+                {homeState.regOpenBool ?
+                    <h1 className="lusitana countdown">Registreringen har åpnet!</h1>
+                    :
+                    <>
+                        <div>{countdownTitle.toUpperCase()}</div>
+                        <Countdown seasonStart='04/04/2022 12:00:00 +0200'></Countdown>
+                    </>
+                }
             </div >
             <div className="router-page">
                 <div id="homeAssassinContainer">
@@ -67,9 +73,9 @@ export default function Home() {
                 <h1 className="lusitana">ASSASSIN GAMES</h1>
                 {
                     homeState.regOpenBool ?
-                        <button onClick={() => { window.open("https://forms.office.com/r/bBw5V9pqVv", "_blank") }}>Registrer deg her!</button>
+                        <button id='regLink' onClick={() => { window.open("https://forms.office.com/r/bBw5V9pqVv", "_blank") }}>REGISTRER DEG HER</button>
                         :
-                        <button className='unclickable'>Registreringen åpner snart</button>
+                        <button id='regLink' className='unclickable'>REGISTRERINGEN ÅPNER SNART</button>
                 }
                 <InstaHandle title="ag.trondheim" />
                 <div className="WTContainer">
