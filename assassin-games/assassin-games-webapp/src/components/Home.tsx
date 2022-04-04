@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
-import { reduxStore } from '../utilities/Interfaces'
+//import { useSelector } from 'react-redux'
+//import { reduxStore } from '../utilities/Interfaces'
 
 // Component imports
-import Countdown from './Countdown'
+//import Countdown from './Countdown'
 
 // CSS import
 import '../styling/components/Router.scss'
+import '../styling/components/home.scss'
 
 //Graphics import
 import Iris from '../assets/img/homepage_graphics/irisTorso.png'
@@ -28,7 +29,7 @@ import flyingAssassin from '../assets/img/homepage_graphics/flyingAssassin.png'
 
 export default function Home() {
 
-    let countdownTitle = "registrering åpner om" //TODO: Legg inn info i backend m tittel etc for arrangør
+    //let countdownTitle = "registrering åpner om" //TODO: Legg inn info i backend m tittel etc for arrangør
     const [width, setWidth] = useState(window.innerWidth)
 
     useEffect(() => {
@@ -39,18 +40,22 @@ export default function Home() {
         window.addEventListener('resize', updateWidth)
     })
 
-    const homeState = useSelector((state: reduxStore) => state.home)
+    //const homeState = useSelector((state: reduxStore) => state.home)
 
     return (
         <>
             <div className="countdownContainer">
-                {homeState.regOpenBool ?
+                <h1 className="lusitana countdown">Følg med på instagram for oppdateringer</h1>
+                {
+                    /*
+                    homeState.regOpenBool ?
                     <h1 className="lusitana countdown">Registreringen har åpnet!</h1>
                     :
                     <>
                         <div>{countdownTitle.toUpperCase()}</div>
                         <Countdown seasonStart='04/04/2022 12:00:00 +0200'></Countdown>
                     </>
+                    */
                 }
             </div >
             <div className="router-page">
@@ -71,12 +76,7 @@ export default function Home() {
 
                 </div>
                 <h1 className="lusitana">ASSASSIN GAMES</h1>
-                {
-                    homeState.regOpenBool ?
-                        <button id='regLink' onClick={() => { window.open("https://forms.office.com/r/bBw5V9pqVv", "_blank") }}>REGISTRER DEG HER</button>
-                        :
-                        <button id='regLink' className='unclickable'>REGISTRERINGEN ÅPNER SNART</button>
-                }
+                <button id='regLink' className='unclickable'>PÅMELDINGEN ER STENGT FOR DENNE GANG</button>
                 <InstaHandle title="ag.trondheim" />
                 <div className="WTContainer">
                     <div className='grid-homepage-intro'>
