@@ -1,0 +1,42 @@
+@import "../imports/_color";
+ 
+$ruleCardTextColor: $stonebrown;
+$ruleCardBGColor : $stonepaper; 
+
+.titleControlWrapper{
+    display:flex;
+    justify-self: flex-start;
+}
+
+.pageTitle {
+    margin-top: 1rem;
+    font-size: 41px;
+}
+
+.pageDesc {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.ruleCardWrapper{
+    background-color: $stonepaper;
+    color: $ruleCardTextColor;
+    margin: 1rem;
+    padding: 5px; 
+}
+
+.ruleCardTitle{
+    color: $stonebrown;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.ruleCardBulletContainer > * {
+    color: $stonebrown;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.ruleCardBullet {
+    color: $ruleCardTextColor;
+}
