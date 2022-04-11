@@ -2,6 +2,7 @@ import About from "./components/About";
 import Contestants from "./components/Contestants";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar/Navbar";
+import Rules from "./components/Rules/Rules";
 //import Registration, { RegistrationLanding } from "./components/Registration/Registration";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/players" element={<Contestants />} />
+            <Route path="/rules" element={<Rules />} />
             {
               /*
               <Route path="/registration" element={<Registration />} />
