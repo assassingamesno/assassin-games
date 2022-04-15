@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import RuleCard from './RuleCard'
 
 //Importing styling
@@ -8,76 +8,69 @@ import '../../styling/components/rules.scss'
 import leftArrow from '../../assets/svg/leftArrowDark.svg'
 import rightArrow from '../../assets/svg/rightArrowDark.svg'
 
+//Importing data
+import {rules} from '../../data/rules'
+
+interface rule {
+  title: string, 
+  desc: Array<{
+    bulletTitle?: string, 
+    bullets : Array<string>,
+  }>
+  double?: boolean,
+  column?: number,
+}
+
 export default function Rules() {
 
-  let rules = [
-    {
-      title: "No Kill Zones", 
-      desc: [
-        {
-          bulletTitle: "No Kill Zones",
-          bullets: [
-            "Innenfor husets fire vegger", 
-            "Sykehus og legevakt, fengsel", 
-            "Lesesal, grupperom, bibliotek, lab (steder hvor det er dyrt utstyr som kan ødelegges av vann bør unngås)", 
-            "Jobb/honorerte verv"],
-        }, 
-        {
-          bulletTitle: "OBS:", 
-          bullets: [
-            "Spiseareal/pauseareal telles ikke som 'No Kill Zone'", 
-            "Veranda/balkong telles ikke som 'No Kill Zone'",
-            "Undervisningsrom på campus telles ikke som 'No Kill Zone'",
-          ]
-        }
-      ]
-    },
-    {
-      title: "Target", 
-      desc: [
-        {
-          bullets: [
-            "Alle får utdelt ett target (navn) og addresse i dm"
-          ]
-        }
-      ]
-    },
-    {
-      title: "Immunity", 
-      desc: [
-        {
-          bullets: [
-            "Skyter du din morder før din morder skyter deg får du en time immunitet"
-          ]
-        }
-      ]
-    },
-    {
-      title: "Elimination", 
-      desc: [
-        {
-          bullets: [
-            "Dreper du ditt target, får du targetet til vedkommende",
-            "Ta bilde og send til @ag.trondheim"
-          ]
-        }
-      ]
-    },
-    {
-      title: "Vold", 
-      desc: [
-        {
-          bullets: [
-            "Utøvelse av vold skal i aller høyeste grad unngås og medfører umiddelbar eliminasjon "
-          ]
-        }
-      ]
-    },
-  ]
+  const [pageIndex, setPageIndex] = useState(0);
 
-  const rulesRendering = rules.map((object) => {
-    return <RuleCard title={object.title} desc={object.desc}/>
+  const pagify = (rules : Array<rule>) => {
+    // Function which takes in a list of rules and divides the list into pages of rules based on necessary amount
+    let necessaryCells = 0; 
+    let pages = []
+    let currPage = []
+    rules.forEach((rule: rule) => {
+      //Check if the page 
+      let demand = rule.double ? 2 : 1;
+      if (necessaryCells + demand <= 8){
+        // Add to current page and adds demand to the counter
+        currPage = [...currPage, rule]
+        necessaryCells += demand; 
+      } else {
+        //If there is not enough space for the current rule
+        // terminate the page and add to pages
+        pages = [...pages, currPage]
+        currPage = [rule]
+        necessaryCells = demand;
+      }
+    })
+
+    //Cleanup: checks that currPage is in pages, and adds if not
+    if (!pages.includes(currPage)) {
+      pages = [...pages, currPage]
+    }
+
+    return pages
+  }
+
+  let pages = pagify(rules)
+
+  const rulesRendering = pages[pageIndex].map((object) => {
+    return <RuleCard title={object.title} desc={object.desc} double={object.double} column={object.column}/>
   })
+
+  const decrementPage = () => {
+    if (!(pageIndex <= 0)) {
+      setPageIndex(pageIndex - 1);
+    }
+  }
+
+  const incrementPage = () => {
+    if (!(pageIndex >= pages.length - 1)) {
+      setPageIndex(pageIndex + 1);
+    }
+  }
 
   return (
     <div className="router-page">
@@ -85,11 +78,11 @@ export default function Rules() {
         <p className='pageDesc'>EN GOD ASSASSIN ER EN LOVLYDIG EN</p>
         <div className='titleControlWrapper'>
           <p className='lusitana pageTitle'>REGLER</p>
-          <button>
-            <img src={leftArrow} alt='arrow-left'/>
+          <button className={'leftArrowButton' + (pageIndex > 0 ? '' : ' unclickable')} onClick={decrementPage}>
+            <img src={leftArrow} alt='arrow-left' />
           </button>
-          <button>
-            <img src={rightArrow} alt='arrow-left'/>
+          <button className={'rightArrowButton' + (pageIndex < pages.length - 1 ? '' : ' unclickable')} onClick={incrementPage}>
+            <img src={rightArrow} alt='arrow-right'/>
           </button>
         </div>
       </div>
