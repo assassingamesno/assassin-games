@@ -2,14 +2,18 @@
  
 $ruleCardTextColor: $stonebrown;
 $ruleCardBGColor : $stonepaper; 
+$controlButtonBorderColor : $stonebrown;
 
 .titleControlWrapper{
     display:flex;
     justify-self: flex-start;
+    margin-bottom: 1rem;
 }
 
 .pageTitle {
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
     font-size: 41px;
 }
 
@@ -48,6 +52,7 @@ $ruleCardBGColor : $stonepaper;
     color: $stonebrown;
     text-align: left;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .ruleCardBullet {
@@ -55,17 +60,21 @@ $ruleCardBGColor : $stonepaper;
 }
 
 .rightArrowButton{
+    border: 2px solid $controlButtonBorderColor;
     padding-left: 9px;
     padding-right: 7px;
     padding-top: 6px;
     padding-bottom: 3px;
+    margin-left: 0.25rem;
 }
 
 .leftArrowButton{
+    border: 2px solid $controlButtonBorderColor;
     padding-left: 7px;
     padding-right: 9px;
     padding-top: 6px;
     padding-bottom: 3px;
+    margin-right: 0.25rem;
 }
 
 .CardsWrapper {
