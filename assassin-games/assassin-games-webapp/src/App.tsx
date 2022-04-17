@@ -1,9 +1,12 @@
-import About from "./components/About";
-import Contestants from "./components/Contestants";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Rules from "./components/Rules/Rules";
-//import Registration, { RegistrationLanding } from "./components/Registration/Registration";
+
+/*
+import Registration, { RegistrationLanding } from "./components/Registration/Registration";
+import About from "./components/About";
+import Contestants from "./components/Contestants";
+*/
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styling/components/Router.scss";
@@ -17,11 +20,11 @@ function App() {
         <div id="page-wrap">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/players" element={<Contestants />} />
             <Route path="/rules" element={<Rules />} />
             {
               /*
+              <Route path="/about" element={<About />} />
+              <Route path="/players" element={<Contestants />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/registration/landing" element={<RegistrationLanding />} />
               */
