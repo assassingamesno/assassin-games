@@ -10,12 +10,19 @@ export default function Sidebar() {
           <Link className="menu-item" to={"/"}>
             Hovedside
           </Link>
-          <Link className="menu-item" to={"/players"}>
-            Spillere
+          <Link className="menu-item" to={"/rules"}>
+            Spillets regler
           </Link>
-          <Link className="menu-item" to={"/about"}>
-            Om oss
-          </Link>
+          {
+            /*
+              <Link className="menu-item" to={"/players"}>
+                Spillere
+              </Link>
+              <Link className="menu-item" to={"/about"}>
+                Om oss
+              </Link>
+            */
+          }
         </Menu>
       </nav>
     </div>
