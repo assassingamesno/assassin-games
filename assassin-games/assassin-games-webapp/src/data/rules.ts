@@ -103,7 +103,7 @@ export const rules = [
       desc: [
         {
           bullets: [
-            "Alle assassins som ikke har drept sitt target innen 9. Mai kl 23:59 blir automatisk eliminert fra spillet.",
+            "Alle assassins som ikke har drept sitt target innen 9. mai kl 23:59 blir automatisk eliminert fra spillet.",
             "Assassins som mister targetet sitt grunnet two weeks notice vil da få utdelt nytt target.",
             "Eksempel: I et spill med rekken av targets Hege, Martin, Arne, Mats og Anne, hvor Arne og Mats ryker grunnet regelen, så vil Martin få nytt target: Anne.",
           ]
@@ -130,7 +130,7 @@ export const rules = [
       title: "Final Day", 
       desc: [
         {
-          bulletTitle: "Location: Mellom Trondheim Torg og Ila. \nInfo: Basert på innspill fra deltakere. Finalen minner om et rebusløp hvor finalistene bil bli testet i kreativitet, AG-kunnskap og skyteevner. Dersom du vil vinne finalen lønner det seg å følge med på hendelsesforløpet gjennom hele spillet. \n\n Regler:",
+          bulletTitle: "Location: Mellom Trondheim Torg og Ila. \n\nInfo: Basert på innspill fra deltakere. Finalen minner om et rebusløp hvor finalistene bil bli testet i kreativitet, AG-kunnskap og skyteevner. Dersom du vil vinne finalen lønner det seg å følge med på hendelsesforløpet gjennom hele spillet. \n\n Regler:",
           bullets: [
             "Ikke lov med flere vannpistoler, så still opp med full vannpistol og ha med påfyll",
             "Ikke lov med transportmidler", 
