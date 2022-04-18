@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import RuleCard from './RuleCard'
 
 //Importing styling
@@ -24,6 +24,18 @@ interface rule {
 export default function Rules() {
 
   const [pageIndex, setPageIndex] = useState(0);
+
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+      function updateWidth() {
+          setWidth(window.innerWidth)
+      }
+
+      window.addEventListener('resize', updateWidth)
+  })
+
+  const mobileScreen = (width < 1100);
 
   const pagify = (rules : Array<rule>) => {
     // Function which takes in a list of rules and divides the list into pages of rules based on necessary amount
@@ -54,7 +66,7 @@ export default function Rules() {
     return pages
   }
 
-  let pages = pagify(rules)
+  let pages = mobileScreen ? [rules] : pagify(rules)
 
   const rulesRendering = pages[pageIndex].map((object) => {
     return <RuleCard title={object.title} desc={object.desc} double={object.double} column={object.column}/>
@@ -78,12 +90,17 @@ export default function Rules() {
         <p className='pageDesc'>EN GOD ASSASSIN ER EN LOVLYDIG EN</p>
         <div className='titleControlWrapper'>
           <p className='lusitana pageTitle'>REGLER</p>
-          <button className={'leftArrowButton' + (pageIndex > 0 ? '' : ' unclickable')} onClick={decrementPage}>
-            <img src={leftArrow} alt='arrow-left' />
-          </button>
-          <button className={'rightArrowButton' + (pageIndex < pages.length - 1 ? '' : ' unclickable')} onClick={incrementPage}>
-            <img src={rightArrow} alt='arrow-right'/>
-          </button>
+          {
+            mobileScreen ? <></> : 
+            <>
+              <button className={'leftArrowButton' + (pageIndex > 0 ? '' : ' unclickable')} onClick={decrementPage}>
+                <img src={leftArrow} alt='arrow-left' />
+              </button>
+              <button className={'rightArrowButton' + (pageIndex < pages.length - 1 ? '' : ' unclickable')} onClick={incrementPage}>
+                <img src={rightArrow} alt='arrow-right'/>
+              </button>
+            </>
+          }
         </div>
       </div>
       <div className='CardsWrapper'>
