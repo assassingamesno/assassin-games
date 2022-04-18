@@ -6,12 +6,12 @@ export default function Sidebar() {
   return (
     <div>
       <nav>
-        <Menu width={"15%"} pageWrapId={"page-wrap"} outerContainerId={"App"} customBurgerIcon={<img src={burgerMenuIcon} alt="menu-icon" />} right>
+        <Menu width={"240px"} pageWrapId={"page-wrap"} outerContainerId={"App"} customBurgerIcon={<img src={burgerMenuIcon} alt="menu-icon" />} right>
           <Link className="menu-item" to={"/"}>
-            Hovedside
+            HOVEDSIDE
           </Link>
           <Link className="menu-item" to={"/rules"}>
-            Spillets regler
+            REGLER
           </Link>
           {
             /*
