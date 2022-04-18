@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import burgerMenuIcon from "../../assets/svg/burgerMenuIcon.svg"
+import instaHandle from "../../assets/img/instaIconDark.png"
 
 export default function Sidebar() {
   return (
@@ -13,6 +14,11 @@ export default function Sidebar() {
           <Link className="menu-item" to={"/rules"}>
             REGLER
           </Link>
+
+
+          <div className="menu-item">
+            <img className="handleIcon" src={instaHandle} alt="@ag.trondheim" width="24px" onClick={() => { window.open("https://www.instagram.com/ag.trondheim", "_blank") }}/>
+          </div>
           {
             /*
               <Link className="menu-item" to={"/players"}>
