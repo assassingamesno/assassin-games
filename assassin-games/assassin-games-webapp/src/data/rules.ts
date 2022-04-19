@@ -1,4 +1,14 @@
-export const rules = [
+interface rule {
+  title: string, 
+  desc: Array<{
+    bulletTitle?: string, 
+    bullets : Array<string>,
+  }>
+  double?: boolean,
+  column?: number,
+}
+
+export const rules : Array<rule> = [
     {
       title: "No Kill Zones", 
       desc: [

@@ -8,9 +8,6 @@ import '../../styling/components/rules.scss'
 import leftArrow from '../../assets/svg/leftArrowDark.svg'
 import rightArrow from '../../assets/svg/rightArrowDark.svg'
 
-//Importing data
-import {rules} from '../../data/rules'
-
 interface rule {
   title: string, 
   desc: Array<{
@@ -21,7 +18,13 @@ interface rule {
   column?: number,
 }
 
-export default function Rules() {
+interface props {
+  title: string,
+  pageDesc: string,
+  data : Array<rule>;
+}
+
+export default function Rules(props: props) {
 
   const [pageIndex, setPageIndex] = useState(0);
 
@@ -66,7 +69,7 @@ export default function Rules() {
     return pages
   }
 
-  let pages = mobileScreen ? [rules] : pagify(rules)
+  let pages = mobileScreen ? [props.data] : pagify(props.data)
 
   const rulesRendering = pages[pageIndex].map((object) => {
     return <RuleCard title={object.title} desc={object.desc} double={object.double} column={object.column}/>
@@ -87,9 +90,9 @@ export default function Rules() {
   return (
     <div className="router-page">
       <div className='pageTitleWrapper'>
-        <p className='pageDesc'>EN GOD ASSASSIN ER EN LOVLYDIG EN</p>
+        <p className='pageDesc'>{props.pageDesc.toUpperCase()}</p>
         <div className='titleControlWrapper'>
-          <p className='lusitana pageTitle'>REGLER</p>
+          <p className='lusitana pageTitle'>{props.title.toUpperCase()}</p>
           {
             mobileScreen ? <></> : 
             <>
