@@ -24,6 +24,9 @@ export default function Sidebar() {
           <Link className="menu-item" to={"/rules"} onClick={()=>{setOpen(false)}}>
             REGLER
           </Link>
+          <Link className="menu-item" to={"/awards"} onClick={()=>{setOpen(false)}}>
+            PREMIER
+          </Link>
 
 
           <div className="menu-item">
