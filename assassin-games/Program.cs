@@ -36,6 +36,7 @@ builder.Services.AddScoped<IRuleService, RuleService>();
 builder.Services.AddScoped<ISeasonService, SeasonService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IStudyService, StudyService>();
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "assassingames_backend", Version = "v1" });
@@ -48,7 +49,7 @@ var app = builder.Build();
 
 
 
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
@@ -60,6 +61,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
 
 /*app.MapControllerRoute(
     name: "default",
