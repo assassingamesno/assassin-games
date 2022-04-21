@@ -1,22 +1,44 @@
-using assassingames_backend;
 using assassingames_backend.DbContexts;
 using assassingames_backend.Repositories;
 using assassingames_backend.Repositories.Interfaces;
 using assassingames_backend.Services;
 using assassingames_backend.Services.Interfaces;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Azure.Core;
 
 var builder = WebApplication.CreateBuilder(args);
+
+SecretClientOptions options = new SecretClientOptions()
+{
+    Retry =
+        {
+            Delay= TimeSpan.FromSeconds(2),
+            MaxDelay = TimeSpan.FromSeconds(16),
+            MaxRetries = 5,
+            Mode = RetryMode.Exponential
+         }
+};
+
+var secretValue = "";
+
+if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
+{
+    secretValue = builder.Configuration.GetConnectionString("SecretName");
+}
+else
+{
+    var client = new SecretClient(new Uri("https://assassin-games-vault.vault.azure.net/"), new DefaultAzureCredential(), options);
+    KeyVaultSecret secret = client.GetSecret(builder.Configuration.GetConnectionString("SecretName"));
+    secretValue = secret.Value;
+}
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(
                 options => options.UseMySql(
-                    builder.Configuration.GetConnectionString("DefaultConnection"), 
-                    ServerVersion.AutoDetect(
-                        builder.Configuration.GetConnectionString("DefaultConnection"))
+                    secretValue, ServerVersion.AutoDetect(secretValue)
                 ));
 builder.Services.AddScoped<IHuntRepository, HuntRepository>();
 builder.Services.AddScoped<ILeadershipRepository, LeadershipRepository>();
@@ -51,21 +73,31 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseSwaggerUI(options => {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json",
+        "Assassin Games API");
+    });
+}
+else
+{
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+    app.UseHttpsRedirection();
+
 }
 
 //startup.Configure(app, app.Environment);
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
 
-/*app.MapControllerRoute(
+app.MapControllerRoute(
     name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");*/
+    pattern: "{controller}/{action=Index}/{id?}");
+
+
 
 app.MapFallbackToFile("index.html"); ;
 
