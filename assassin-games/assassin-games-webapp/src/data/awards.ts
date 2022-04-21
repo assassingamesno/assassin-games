@@ -76,7 +76,7 @@ export const awards : Array<rule> = [
         title: 'Snitches',
         desc: [
             {
-                bulletTitle : 'TODO: Get stitches',
+                bulletTitle : 'Get riches',
                 bullets: []
             }
         ]
