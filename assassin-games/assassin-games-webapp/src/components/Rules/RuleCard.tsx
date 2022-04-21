@@ -1,8 +1,5 @@
 import React from 'react'
 
-//Importing dummy picture. Should not be deployed
-import testImage from '../../assets/img/assassinTrophySilver.png'
-
 interface props {
   title: string,
   desc: Array<
@@ -11,6 +8,7 @@ interface props {
       bullets: Array<string>
     }
   >,
+  image: string,
   double?: boolean,
   column?: number,
 }
@@ -40,7 +38,7 @@ export default function RuleCard(props: props) {
     <div className='ruleCardWrapper' style={CardStyle}>
       <div className='ruleCardHeader'>
         <h1 className='ruleCardTitle lusitana'>{props.title}</h1>
-        <img className='ruleCardImage' src={testImage} alt='cardImage' width="80px" height='80px'/>
+        <img className='ruleCardImage' src={props.image} alt='cardImage' width="80px" height='80px'/>
       </div>
       {renderBullets}
     </div>
