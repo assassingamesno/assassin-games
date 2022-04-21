@@ -4,6 +4,7 @@ interface rule {
     bulletTitle?: string, 
     bullets : Array<string>,
   }>
+  image: string,
   double?: boolean,
   column?: number,
 }
@@ -29,6 +30,7 @@ export const rules : Array<rule> = [
           ]
         }
       ],
+      image : 'Nokill',
       double : true,
       column : 1,
     },
@@ -40,7 +42,8 @@ export const rules : Array<rule> = [
             "Alle får utdelt ett target (navn) og addresse i dm"
           ]
         }
-      ]
+      ],
+      image : 'Target',
     },
     {
       title: "Immunity", 
@@ -51,6 +54,7 @@ export const rules : Array<rule> = [
           ]
         }
       ],
+      image : 'Immunity',
     },
     {
       title: "Elimination", 
@@ -61,7 +65,8 @@ export const rules : Array<rule> = [
             "Ta bilde og send til @ag.trondheim"
           ]
         }
-      ]
+      ],
+      image : 'Elimination',
     },
     {
       title: "Vold", 
@@ -71,7 +76,8 @@ export const rules : Array<rule> = [
             "Utøvelse av vold skal i aller høyeste grad unngås og medfører umiddelbar eliminasjon "
           ]
         }
-      ]
+      ],
+      image : 'Vold',
     },
     {
       title: "Weapons & Defence", 
@@ -84,6 +90,7 @@ export const rules : Array<rule> = [
           ]
         }
       ],
+      image: 'Defence',
       double : true,
       column : 4
     },
@@ -96,7 +103,8 @@ export const rules : Array<rule> = [
             "Deltakere må melde fra til styret",
           ]
         }
-      ]
+      ],
+      image : 'Corona',
     },
     {
       title: "No no civilian", 
@@ -106,7 +114,8 @@ export const rules : Array<rule> = [
             "Unngå å skyte sivile. Hvis hendelsen likevel inntreffer, promoter gjerne spillet",
           ]
         }
-      ]
+      ],
+      image : 'NonoCivilian',
     },
     {
       title: "Two weeks notice", 
@@ -119,6 +128,7 @@ export const rules : Array<rule> = [
           ]
         }
       ],
+      image : 'Notice',
       double : true,
       column : 2,
     },
@@ -133,6 +143,7 @@ export const rules : Array<rule> = [
           ]
         }
       ],
+      image : 'Finaleuka',
       double : true,
       column : 3,
     },
@@ -149,6 +160,7 @@ export const rules : Array<rule> = [
           ]
         }
       ],
+      image : 'Finaledag',
       double : true,
       column : 4,
     },

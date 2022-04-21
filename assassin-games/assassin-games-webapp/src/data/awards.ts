@@ -4,6 +4,7 @@ interface rule {
       bulletTitle?: string, 
       bullets : Array<string>,
     }>
+    image: string,
     double?: boolean,
     column?: number,
   }
@@ -16,7 +17,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Den første som dreper noen',
                 bullets: []
             }
-        ]
+        ],
+        image : 'Vinmonopolet',
     },
     {
         title: 'Assassin of the week',
@@ -25,7 +27,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Den som dreper flest hver uke',
                 bullets: []
             }
-        ]
+        ],
+        image : 'Midtbyen',
     },
     {
         title: 'Best director',
@@ -34,7 +37,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Den som filmer det beste contentet',
                 bullets: []
             }
-        ]
+        ],
+        image: 'Sushi',
     },
     {
         title: 'Jack the ripper',
@@ -43,7 +47,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Den som gjennomfører den beste kill-planen',
                 bullets: []
             }
-        ]
+        ], 
+        image: 'Massasje'
     },
     {
         title: 'Hat trick',
@@ -52,7 +57,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Den første som klarer å eliminere tre personer på én dag',
                 bullets: []
             }
-        ]
+        ],
+        image: 'Folkbadstu'
     },
     {
         title: 'Most Kills',
@@ -61,7 +67,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Den som har drept flest targets sammenlagt',
                 bullets: []
             }
-        ]
+        ],
+        image: 'Massasje'
     },
     {
         title: 'Hypeman',
@@ -70,7 +77,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Beste engasjement',
                 bullets: []
             }
-        ]
+        ],
+        image : 'Rush'
     },
     {
         title: 'Snitches',
@@ -79,7 +87,8 @@ export const awards : Array<rule> = [
                 bulletTitle : 'Get riches',
                 bullets: []
             }
-        ]
+        ],
+        image: 'SitKafe',
     },
     {
         title: 'Last Man Standing',
@@ -89,6 +98,7 @@ export const awards : Array<rule> = [
                 bullets: []
             }
         ],
+        image : 'Vinner',
         double: true,
     },
 
