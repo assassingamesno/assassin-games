@@ -69,7 +69,6 @@ export default function Home() {
 
                 </div>
                 <h1 className="lusitana">ASSASSIN GAMES</h1>
-                <button id='regLink' className='unclickable'>PÅMELDINGEN ER STENGT FOR DENNE GANG</button>
                 <InstaHandle title="ag.trondheim" />
                 <div className="WTContainer">
                     <div className='grid-homepage-intro'>
