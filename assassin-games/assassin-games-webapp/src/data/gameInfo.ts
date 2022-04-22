@@ -14,7 +14,7 @@ export const gameTimestamps: Array<CountdownInput> = [
     },
     {
         event: 'gameStart',
-        starttime: '04/22/2022 17:37:00 +0200',
+        starttime: '04/25/2022 00:00:00 +0200',
         title: 'Spillet starter om',
     },
     {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CountdownInput } from '../../utilities/Interfaces'
 
 // Import of components
@@ -12,6 +12,8 @@ export default function CountdownOperator(props : props) {
 
     const now = new Date();
     let nextCD : CountdownInput;
+
+    const [rerender, setRerender] = useState(false)
 
     const findCurrentInterval = (inputs : Array<CountdownInput>) => {
         inputs.some((object: CountdownInput) => {
@@ -27,7 +29,7 @@ export default function CountdownOperator(props : props) {
 
     findCurrentInterval(props.seasonInfo);
 
-    console.log(nextCD)
+
 
     return (
         <div>
@@ -35,7 +37,7 @@ export default function CountdownOperator(props : props) {
             {nextCD.cdReplacement ? 
                 <h1 className='lusitana countdown'>{nextCD.cdReplacement}</h1> 
             :
-                <Countdown seasonStart={nextCD.starttime}/>
+                <Countdown seasonStart={nextCD.starttime} onFinish={() => {setRerender(!rerender);}}/>
             }
         </div>
     )
