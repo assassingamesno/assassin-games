@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { openReg } from '../../store/home/actions'
 
-import '../styling/components/home.scss'
+import '../../styling/components/home.scss'
 
 interface CountdownProps {
     seasonStart: string //String with the date for the season start

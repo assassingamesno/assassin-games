@@ -30,6 +30,13 @@ export default function CountdownOperator(props : props) {
     console.log(nextCD)
 
     return (
-        <div>CountdownOperator</div>
+        <div>
+            <div>{nextCD.title.toUpperCase()}</div>
+            {nextCD.cdReplacement ? 
+                <h1 className='lusitana countdown'>{nextCD.cdReplacement}</h1> 
+            :
+                <Countdown seasonStart={nextCD.starttime}/>
+            }
+        </div>
     )
 }

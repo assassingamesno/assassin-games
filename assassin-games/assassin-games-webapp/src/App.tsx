@@ -1,6 +1,6 @@
 import About from "./components/About";
 import Contestants from "./components/Contestants";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 //import Registration, { RegistrationLanding } from "./components/Registration/Registration";
 
