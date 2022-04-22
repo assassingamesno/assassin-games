@@ -35,7 +35,10 @@ export default function CountdownOperator(props : props) {
         <div>
             <div>{nextCD.title.toUpperCase()}</div>
             {nextCD.cdReplacement ? 
-                <h1 className='lusitana countdown'>{nextCD.cdReplacement}</h1> 
+                <>
+                    <h1 className='lusitana countdown'>{nextCD.cdReplacement}</h1> 
+                    <Countdown style={{display:'none'}} seasonStart={nextCD.starttime} onFinish={() => {setRerender(!rerender);}}/>
+                </>
             :
                 <Countdown seasonStart={nextCD.starttime} onFinish={() => {setRerender(!rerender);}}/>
             }

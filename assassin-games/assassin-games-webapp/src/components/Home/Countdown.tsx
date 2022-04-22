@@ -4,7 +4,8 @@ import '../../styling/components/home.scss'
 
 interface CountdownProps {
     seasonStart: string, //String with the date for the season start
-    onFinish: () => void
+    onFinish: () => void,
+    style?: React.CSSProperties,
 }
 
 export default function Countdown(props: CountdownProps) {
@@ -47,7 +48,7 @@ export default function Countdown(props: CountdownProps) {
     })
 
     return (
-        <div>
+        <div style={props.style}>
             <h1 className="lusitana countdown">
                 {
                     res[0].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }) + "d : " +
