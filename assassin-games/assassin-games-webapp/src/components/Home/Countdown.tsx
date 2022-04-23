@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import { openReg } from '../store/home/actions'
 
-import '../styling/components/home.scss'
+import '../../styling/components/home.scss'
 
 interface CountdownProps {
-    seasonStart: string //String with the date for the season start
+    seasonStart: string, //String with the date for the season start
+    onFinish: () => void,
+    style?: React.CSSProperties,
 }
 
 export default function Countdown(props: CountdownProps) {
@@ -13,8 +13,6 @@ export default function Countdown(props: CountdownProps) {
     const countdownDate = new Date(Date.parse(props.seasonStart));
     const now = new Date()
     const [res, setRes] = useState(getTimeUntilStart(now, countdownDate));
-
-    const dispatch = useDispatch()
 
     function getTimeUntilStart(curr: Date, start: Date): [number, number, number, number] {
         // Helper function calculating the days, hours and seconds between curr and start
@@ -40,7 +38,8 @@ export default function Countdown(props: CountdownProps) {
             setRes(getTimeUntilStart(new Date(), countdownDate));
         }, 1050)
         if (now.getTime() - countdownDate.getTime() >= 0) {
-            dispatch(openReg())
+            console.log('Timeout finished!')
+            props.onFinish();
         }
 
         return () => {
@@ -49,7 +48,7 @@ export default function Countdown(props: CountdownProps) {
     })
 
     return (
-        <div>
+        <div style={props.style}>
             <h1 className="lusitana countdown">
                 {
                     res[0].toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }) + "d : " +

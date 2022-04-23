@@ -6,26 +6,30 @@ import React, { useEffect, useState } from 'react'
 //import Countdown from './Countdown'
 
 // CSS import
-import '../styling/components/Router.scss'
-import '../styling/components/home.scss'
+import '../../styling/components/Router.scss'
+import '../../styling/components/home.scss'
 
 //Graphics import
-import Iris from '../assets/img/homepage_graphics/irisTorso.png'
-import Gress from '../assets/img/homepage_graphics/gressTorso.png'
-import Eucalyptus from '../assets/img/homepage_graphics/eucalyptusTorso.png'
-import Lovehearts from '../assets/img/homepage_graphics/loveheartsTorso.png'
-import Sandmonster from '../assets/img/homepage_graphics/sandmonsterTorso.png'
-import igIcon from '../assets/svg/instaLogoNeg.svg'
-import combinedTorsos from '../assets/img/homepage_graphics/combinedTorso.png'
-import gameStart from '../assets/img/homepage_graphics/gameStart.png'
-import huntStart from '../assets/img/homepage_graphics/huntStart.png'
-import huntAttack from '../assets/img/homepage_graphics/huntAttack.png'
-import newTarget from '../assets/img/homepage_graphics/newTarget.png'
-import huntHerjer from '../assets/img/homepage_graphics/huntHerjer.png'
-import instaUpdates from '../assets/img/homepage_graphics/instaUpdates.png'
-import awardsDuring from '../assets/img/homepage_graphics/awardsDuring.png'
-import winner from '../assets/img/homepage_graphics/winner.png'
-import flyingAssassin from '../assets/img/homepage_graphics/flyingAssassin.png'
+import Iris from '../../assets/img/homepage_graphics/irisTorso.png'
+import Gress from '../../assets/img/homepage_graphics/gressTorso.png'
+import Eucalyptus from '../../assets/img/homepage_graphics/eucalyptusTorso.png'
+import Lovehearts from '../../assets/img/homepage_graphics/loveheartsTorso.png'
+import Sandmonster from '../../assets/img/homepage_graphics/sandmonsterTorso.png'
+import igIcon from '../../assets/svg/instaLogoNeg.svg'
+import combinedTorsos from '../../assets/img/homepage_graphics/combinedTorso.png'
+import gameStart from '../../assets/img/homepage_graphics/gameStart.png'
+import huntStart from '../../assets/img/homepage_graphics/huntStart.png'
+import huntAttack from '../../assets/img/homepage_graphics/huntAttack.png'
+import newTarget from '../../assets/img/homepage_graphics/newTarget.png'
+import huntHerjer from '../../assets/img/homepage_graphics/huntHerjer.png'
+import instaUpdates from '../../assets/img/homepage_graphics/instaUpdates.png'
+import awardsDuring from '../../assets/img/homepage_graphics/awardsDuring.png'
+import winner from '../../assets/img/homepage_graphics/winner.png'
+import flyingAssassin from '../../assets/img/homepage_graphics/flyingAssassin.png'
+import CountdownOperator from './CountdownOperator'
+
+// Data import
+import { gameTimestamps } from '../../data/gameInfo'
 
 export default function Home() {
 
@@ -45,18 +49,7 @@ export default function Home() {
     return (
         <>
             <div className="countdownContainer">
-                <h1 className="lusitana countdown">Følg med på instagram for oppdateringer</h1>
-                {
-                    /*
-                    homeState.regOpenBool ?
-                    <h1 className="lusitana countdown">Registreringen har åpnet!</h1>
-                    :
-                    <>
-                        <div>{countdownTitle.toUpperCase()}</div>
-                        <Countdown seasonStart='04/04/2022 12:00:00 +0200'></Countdown>
-                    </>
-                    */
-                }
+                <CountdownOperator seasonInfo={gameTimestamps}/>
             </div >
             <div className="router-page">
                 <div id="homeAssassinContainer">
@@ -76,7 +69,6 @@ export default function Home() {
 
                 </div>
                 <h1 className="lusitana">ASSASSIN GAMES</h1>
-                <button id='regLink' className='unclickable'>PÅMELDINGEN ER STENGT FOR DENNE GANG</button>
                 <InstaHandle title="ag.trondheim" />
                 <div className="WTContainer">
                     <div className='grid-homepage-intro'>

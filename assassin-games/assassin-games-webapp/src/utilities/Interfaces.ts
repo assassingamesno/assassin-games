@@ -34,3 +34,11 @@ export interface registration {
     Student: Student,
     Location: Location,
 }
+
+// Countdown related interface
+export interface CountdownInput {
+    event: string,
+    starttime: string,
+    title: string,
+    cdReplacement?: string,
+}

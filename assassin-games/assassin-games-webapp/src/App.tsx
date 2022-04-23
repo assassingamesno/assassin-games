@@ -1,6 +1,6 @@
 import About from "./components/About";
 import Contestants from "./components/Contestants";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 //import Registration, { RegistrationLanding } from "./components/Registration/Registration";
 
@@ -18,12 +18,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/players" element={<Contestants />} />
-            {
-              /*
+            {/*
               <Route path="/registration" element={<Registration />} />
               <Route path="/registration/landing" element={<RegistrationLanding />} />
-              */
-            }
+              */}
           </Routes>
         </div>
       </Router>
