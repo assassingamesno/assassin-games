@@ -1,13 +1,5 @@
-interface rule {
-    title: string, 
-    desc: Array<{
-      bulletTitle?: string, 
-      bullets : Array<string>,
-    }>
-    image: string,
-    double?: boolean,
-    column?: number,
-  }
+import { rule } from "../utilities/Interfaces";
+import winner from "../assets/img/assassinTrophySilver.png"
 
 export const awards : Array<rule> = [
     {
@@ -98,6 +90,7 @@ export const awards : Array<rule> = [
                 bullets: []
             }
         ],
+        bulletImage: winner,
         image : 'Vinner',
         double: true,
     },

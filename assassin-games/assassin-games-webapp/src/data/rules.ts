@@ -1,13 +1,5 @@
-interface rule {
-  title: string, 
-  desc: Array<{
-    bulletTitle?: string, 
-    bullets : Array<string>,
-  }>
-  image: string,
-  double?: boolean,
-  column?: number,
-}
+import { rule } from "../utilities/Interfaces";
+
 
 export const rules : Array<rule> = [
     {

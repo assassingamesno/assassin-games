@@ -35,6 +35,19 @@ export interface registration {
     Location: Location,
 }
 
+// Rules and rewards related interface
+export interface rule {
+    title: string, 
+    desc: Array<{
+      bulletTitle?: string, 
+      bullets : Array<string>,
+    }>
+    bulletImage?: string,
+    image: string,
+    double?: boolean,
+    column?: number,
+}
+
 // Countdown related interface
 export interface CountdownInput {
     event: string,

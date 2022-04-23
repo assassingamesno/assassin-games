@@ -73,7 +73,7 @@ export default function Rules(props: props) {
   let pages = mobileScreen ? [props.data] : pagify(props.data)
 
   const rulesRendering = pages[pageIndex].map((object) => {
-    return <RuleCard title={object.title} desc={object.desc} double={object.double} column={object.column} image={require('../../assets/img/ruleCardImages/'+ object.image +'.png')}/>
+    return <RuleCard rule={object}/>
   })
 
   const decrementPage = () => {
