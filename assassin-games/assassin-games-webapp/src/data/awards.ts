@@ -14,7 +14,7 @@ export const awards : Array<rule> = [
         title: 'First Kill',
         desc: [
             {
-                bulletTitle : 'Den første som dreper noen',
+                bulletTitle : 'Den første som dreper noen får et gavekort på 250 kr fra vinmonopolet.',
                 bullets: []
             }
         ],
@@ -24,7 +24,7 @@ export const awards : Array<rule> = [
         title: 'Assassin of the week',
         desc: [
             {
-                bulletTitle : 'Den som dreper flest hver uke',
+                bulletTitle : 'Hver uke får den assassin som har eliminert flest den uka (mandag-søndag) et gavekort på 500kr fra Midtbyen.',
                 bullets: []
             }
         ],
@@ -34,7 +34,7 @@ export const awards : Array<rule> = [
         title: 'Best director',
         desc: [
             {
-                bulletTitle : 'Den som filmer det beste contentet',
+                bulletTitle : 'Den som filmer det beste contentet får Sushime buffet for to.',
                 bullets: []
             }
         ],
@@ -44,7 +44,7 @@ export const awards : Array<rule> = [
         title: 'Jack the ripper',
         desc: [
             {
-                bulletTitle : 'Den som gjennomfører den beste kill-planen',
+                bulletTitle : 'Den som gjennomfører den beste kill-planen får en velfortjent 50 min massasje på squeeze',
                 bullets: []
             }
         ], 
@@ -54,7 +54,7 @@ export const awards : Array<rule> = [
         title: 'Hat trick',
         desc: [
             {
-                bulletTitle : 'Den første som klarer å eliminere tre personer på én dag',
+                bulletTitle : 'Den første som klarer å eliminere tre personer på én dag får inngang for to på sjøbadet.',
                 bullets: []
             }
         ],
@@ -64,7 +64,7 @@ export const awards : Array<rule> = [
         title: 'Most Kills',
         desc: [
             {
-                bulletTitle : 'Den som har drept flest targets sammenlagt',
+                bulletTitle : 'Den som har eliminert flest targets sammenlagt får en velfortjent 50 min massasje på squeeze.',
                 bullets: []
             }
         ],
@@ -74,7 +74,7 @@ export const awards : Array<rule> = [
         title: 'Hypeman',
         desc: [
             {
-                bulletTitle : 'Beste engasjement',
+                bulletTitle : 'Den med best engasjement får inngang for to på Rush trampolinepark.',
                 bullets: []
             }
         ],
@@ -84,7 +84,7 @@ export const awards : Array<rule> = [
         title: 'Snitches',
         desc: [
             {
-                bulletTitle : 'Get riches',
+                bulletTitle : 'Get riches i form av 100 kr gavekort på Sit.',
                 bullets: []
             }
         ],
@@ -94,7 +94,7 @@ export const awards : Array<rule> = [
         title: 'Last Man Standing',
         desc: [
             {
-                bulletTitle : 'Den siste som står igjen',
+                bulletTitle : 'Den siste som står igjen får 5k.',
                 bullets: []
             }
         ],
