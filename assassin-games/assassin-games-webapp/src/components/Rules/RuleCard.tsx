@@ -32,7 +32,7 @@ export default function RuleCard(props: {rule : rule}) {
       </div>
       {renderBullets}
       {
-        rule.bulletImage ? <img src={rule.bulletImage} alt='assassin-winner' width='304px'/> : <></>
+        rule.bulletImage ? <img src={rule.bulletImage} alt='assassin-winner' width='290px'/> : <></>
       }
     </div>
   )
