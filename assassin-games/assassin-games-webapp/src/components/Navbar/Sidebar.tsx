@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import burgerMenuIcon from "../../assets/svg/burgerMenuIcon.svg"
-import instaHandle from "../../assets/img/instaIconDark.png"
+import instaHandle from "../../assets/svg/NegativeInstalogo.svg"
 import { useState } from "react";
 
 export default function Sidebar() {
