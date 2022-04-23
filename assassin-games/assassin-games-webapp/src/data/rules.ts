@@ -143,7 +143,7 @@ export const rules : Array<rule> = [
       title: "Final Day", 
       desc: [
         {
-          bulletTitle: "Location: Mellom Trondheim Torg og Ila. \n\nInfo: Basert på innspill fra deltakere. Finalen minner om et rebusløp hvor finalistene bil bli testet i kreativitet, AG-kunnskap og skyteevner. Dersom du vil vinne finalen lønner det seg å følge med på hendelsesforløpet gjennom hele spillet. \n\n Regler:",
+          bulletTitle: "Location: \nMellom Trondheim Torg og Ila. \n\nInfo: \nBasert på innspill fra deltakere. Finalen minner om et rebusløp hvor finalistene bil bli testet i kreativitet, AG-kunnskap og skyteevner. Dersom du vil vinne finalen lønner det seg å følge med på hendelsesforløpet gjennom hele spillet. \n\n Regler:",
           bullets: [
             "Ikke lov med flere vannpistoler, så still opp med full vannpistol og ha med påfyll",
             "Ikke lov med transportmidler", 
