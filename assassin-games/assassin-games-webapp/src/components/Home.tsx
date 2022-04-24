@@ -107,14 +107,12 @@ export default function Home() {
         </div>
         <div className="WTGraphicWrapper">
           <div className="item3">
-            {" "}
             <WalkthroughGraphic
               title="Alle spillere får tildelt én vannpistol og ett target"
               graphic={gameStart}
             />
           </div>
           <div className="item4">
-            {" "}
             <WalkthroughGraphic title="Jakten har begynt" graphic={huntStart} />
           </div>
           <div className="item5">
@@ -138,11 +136,32 @@ export default function Home() {
               graphic={instaUpdates}
             />
           </div>
+          {/* <div>
+            {width > 1000 ? (
+              <>
+                <div id="tittelItem9">
+                  <p>Premier underveis</p>
+                </div>
+                <div className="item9">
+                  <WalkthroughGraphic title="" graphic={awardsDuring} />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="item9">
+                  <WalkthroughGraphic
+                    title="Premier underveis"
+                    graphic={awardsDuring}
+                  />
+                </div>
+              </>
+            )}
+          </div> */}
+          <div className="WTGraphicTitle">
+            <h2>Premier underveis</h2>
+          </div>
           <div className="item9">
-            <WalkthroughGraphic
-              title="Premier underveis"
-              graphic={awardsDuring}
-            />
+            <WalkthroughGraphic title="" graphic={awardsDuring} />
           </div>
           <div className="item10">
             <WalkthroughGraphic
