@@ -76,7 +76,7 @@ export const awards : Array<rule> = [
         title: 'Snitches',
         desc: [
             {
-                bulletTitle : 'Get riches i form av 100 kr gavekort på Sit.',
+                bulletTitle : 'De tre beste snitchesene får riches i form av 100 kr gavekort på Sit.',
                 bullets: []
             }
         ],
