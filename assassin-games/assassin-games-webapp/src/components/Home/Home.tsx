@@ -63,7 +63,7 @@ export default function Home() {
                                 <img src={Gress} alt="grass-assassin" width="174px" height="147px" />
                             </>) :
                             (
-                                <img src={combinedTorsos} alt="assassin-torsos" width="348px" />
+                                <img src={combinedTorsos} alt="assassin-torsos" width="295px" />
                             )
                     }
 
